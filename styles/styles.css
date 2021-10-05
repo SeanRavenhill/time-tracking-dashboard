@@ -105,8 +105,30 @@ a {
 /* Layout */
 .container {
     border: red 1px solid;
-	/* max-width: 375px; */
 	margin: auto 0;
+    padding: 0 2.4rem;
+}
+
+.time-tracking-dash {
+    border: 1px solid green;
+    margin-bottom: 2.4rem;
+}
+
+.user-profile-block {
+    margin-top: 8.1rem;
+}
+
+.user-profile-block, 
+.work-block,
+.play-block,
+.study-block,
+.exercise-block,
+.social-block {
+    margin-bottom: 2.4rem;
+}
+
+.self-care-block {
+    margin-bottom: 8.1rem;
 }
 
 /* Frontend Mentor | attribution */
@@ -122,7 +144,6 @@ a {
 .attribution__link {
 	color: var(--clr-primary-accent);
 }
-
 
 /* Layout Media Queries */
 @media only screen and (max-width: 1920px) {
