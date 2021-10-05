@@ -1,0 +1,138 @@
+/* Google Fonts Import*/
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+
+/* Style Guide & Custom Properties */
+:root {
+	font-size: 10px;
+	--fw-light: 300;
+	--fw-reg: 400;
+	--fw-med: 500;
+	--clr-primary-blue: hsla(246, 80%, 60%, 1);
+	--clr-primary-work: hsla(15, 100%, 70%, 1);
+	--clr-primary-play: hsla(195, 74%, 62%, 1);
+	--clr-primary-study: hsla(348, 100%, 68%, 1);
+	--clr-primary-exercise: hsla(145, 58%, 55%, 1);
+	--clr-primary-social: hsla(264, 64%, 52%, 1);
+	--clr-primary-self-care: hsla(43, 84%, 65%, 1);
+	--clr-neutral-very-dark-blue: hsla(226, 43%, 10%, 1);
+	--clr-neutral-dark-blue: hsla(235, 46%, 20%, 1);
+	--clr-neutral-desaturared-blue: hsla(236, 41%, 34%, 1);
+	--clr-neutral-pale-blue: hsla(236, 100%, 87%, 1);
+	--clr-white: hsla(0, 0%, 100%, 1);
+	--ff-primary: "Rubik", sans-serif;
+	--fs-body: 1.8rem;
+}
+
+/* Showcase Body (Centers Card to Page) - CSS Grid Method */
+body {
+	min-height: 100vh;
+	display: grid;
+	place-items: center;
+}
+
+/* Initialization, Normalization */
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	background-color: var(--clr-neutral-very-dark-blue);
+	font-family: var(--ff-primary);
+	font-size: var(--fs-body);
+	color: var(--clr-white);
+	margin: 0;
+	padding: 0;
+}
+
+img {
+	max-width: 100%;
+	display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+a {
+	margin: 0;
+    padding: 0;
+}
+
+/* Typography & Typhography Media Queries */
+@media only screen and (max-width: 1920px) {
+    h1 {
+        font-size: 5.6rem;
+        font-weight: 300;
+    }
+
+    h2 {
+        font-size: 4rem;
+        font-weight: 300;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    h1 {
+        font-size: 3.2rem;
+        font-weight: 300;
+    }
+
+    h2 {
+        font-size: 2.4rem;
+        font-weight: 300;
+    }
+
+    h3 {
+        font-size: 1.8rem;
+        font-weight: 500;
+    }
+
+    h4 {
+        font-size: 1.5rem;
+        font-weight: 400;
+    }
+
+    p {
+        font-size: 1.8rem;
+        font-weight: 400;
+    }
+}
+
+/* Layout */
+.container {
+    border: red 1px solid;
+	/* max-width: 375px; */
+	margin: auto 0;
+}
+
+/* Frontend Mentor | attribution */
+.attribution {
+	font-size: 11px;
+	text-align: center;
+}
+
+.attribution__text {
+	margin-bottom: 1rem;
+}
+
+.attribution__link {
+	color: var(--clr-primary-accent);
+}
+
+
+/* Layout Media Queries */
+@media only screen and (max-width: 1920px) {
+    .container {
+        min-width: 1440px;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .container {
+        min-width: 375px;
+    }
+}
