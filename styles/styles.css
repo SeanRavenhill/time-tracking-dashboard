@@ -18,6 +18,7 @@
 	--clr-neutral-dark-blue: hsla(235, 46%, 20%, 1);
 	--clr-neutral-desaturared-blue: hsla(236, 41%, 34%, 1);
 	--clr-neutral-pale-blue: hsla(236, 100%, 87%, 1);
+    --clr--btn--passive: hsla(235, 45%, 61%, 1);
 	--clr-white: hsla(0, 0%, 100%, 1);
 	--ff-primary: "Rubik", sans-serif;
 	--fs-body: 1.8rem;
@@ -75,7 +76,7 @@ a {
     }
 }
 
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 428px) {
     h1 {
         font-size: 3.2rem;
         font-weight: 300;
@@ -96,7 +97,8 @@ a {
         font-weight: 400;
     }
 
-    p {
+    p,
+    .btn {
         font-size: 1.8rem;
         font-weight: 400;
     }
@@ -114,11 +116,11 @@ a {
     margin-bottom: 2.4rem;
 }
 
-.user-profile-block {
+.user-block {
     margin-top: 8.1rem;
 }
 
-.user-profile-block, 
+.user-block, 
 .work-block,
 .play-block,
 .study-block,
@@ -129,6 +131,56 @@ a {
 
 .self-care-block {
     margin-bottom: 8.1rem;
+}
+
+.user-profile {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: var(--clr-primary-blue);
+    border-radius: 1.5rem;
+    z-index: 10;
+}
+
+.user-profile-img {
+    width: 6.4rem;
+    height: 6.4rem;
+    border: 3px solid var(--clr-white);
+    border-radius: 50%;
+    margin: 3.5rem 0 3.4rem 3.2rem;
+}
+
+.user-profile-info {
+    margin-left: 2rem;
+    /* margin-right: 100%; */
+}
+
+.user-profile-info__sub-title {
+    margin-bottom: 0.4rem;
+    color: var(--clr-neutral-pale-blue)
+}
+
+.time-periods {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background: var(--clr-neutral-dark-blue);
+    border-radius: 1.5rem;
+    z-index: 0;
+}
+
+.btn {
+    background: none;
+    color: var(--clr--btn--passive);
+    border: none;
+    margin: 15.7rem 0 2.5rem 0; 
+    cursor: pointer;
+}
+
+.btn__active {
+    color: var(--clr-white);
 }
 
 /* Frontend Mentor | attribution */
@@ -152,8 +204,14 @@ a {
     }
 }
 
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 428px) {
     .container {
         min-width: 375px;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .container {
+        min-width: 325px;
     }
 }
