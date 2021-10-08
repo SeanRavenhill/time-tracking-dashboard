@@ -40,7 +40,7 @@ body {
 
 html,
 body {
-	background-color: var(--clr-neutral-very-dark-blue);
+	/* background-color: var(--clr-neutral-very-dark-blue); */
 	font-family: var(--ff-primary);
 	font-size: var(--fs-body);
 	color: var(--clr-white);
@@ -113,34 +113,35 @@ a {
 
 .time-tracking-dash {
     border: 1px solid green;
+    display: grid;
+    grid-column: 1fr;
+    grid-row: 7(1fr);
+    grid-template-areas: 
+        "user-block"
+        "work-block"
+        "play-block"
+        "study-block"
+        "exercise-block"
+        "social-block"
+        "self-care-block";
     margin-bottom: 2.4rem;
+    padding: 8.1rem 0 8.1rem 0;
+    gap: 2.4rem;
 }
 
 .user-block {
-    margin-top: 8.1rem;
-}
-
-.user-block, 
-.work-block,
-.play-block,
-.study-block,
-.exercise-block,
-.social-block {
-    margin-bottom: 2.4rem;
-}
-
-.self-care-block {
-    margin-bottom: 8.1rem;
+    grid-area: user-block;
+    background: var(--clr-neutral-dark-blue);
+    border-radius: 1.5rem;
 }
 
 .user-profile {
-    position: absolute;
+	place-items: center;
     display: flex;
     flex-direction: row;
     align-items: center;
     background: var(--clr-primary-blue);
     border-radius: 1.5rem;
-    z-index: 10;
 }
 
 .user-profile-img {
@@ -148,12 +149,7 @@ a {
     height: 6.4rem;
     border: 3px solid var(--clr-white);
     border-radius: 50%;
-    margin: 3.5rem 0 3.4rem 3.2rem;
-}
-
-.user-profile-info {
-    margin-left: 2rem;
-    /* margin-right: 100%; */
+    margin: 3.5rem 2rem 3.4rem 3.2rem;
 }
 
 .user-profile-info__sub-title {
@@ -162,25 +158,60 @@ a {
 }
 
 .time-periods {
-    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    background: var(--clr-neutral-dark-blue);
-    border-radius: 1.5rem;
-    z-index: 0;
+    text-align: center;
 }
 
 .btn {
-    background: none;
+    background: red;
     color: var(--clr--btn--passive);
     border: none;
-    margin: 15.7rem 0 2.5rem 0; 
+    margin: 2.4rem 0 2.5rem 0; 
     cursor: pointer;
 }
 
+/* .btn {
+    background: red;
+    color: var(--clr--btn--passive);
+    border: none;
+    margin: 1.2rem 0 1.25rem 0; 
+    padding: 1.2rem 2rem 1.25rem 2rem;
+    cursor: pointer;
+} */
+
 .btn__active {
     color: var(--clr-white);
+}
+
+.work-block {
+    grid-area: work-block;
+    background-color: green;
+}
+
+.play-block {
+    grid-area: play-block;
+    background-color: yellow;
+
+}
+.study-block {
+    grid-area: study-block;
+    background-color: orange;
+
+}
+.exercise-block {
+    grid-area: exercise-block;
+    background-color: purple;
+}
+.social-block {
+    grid-area: social-block;
+    background-color: aqua;
+}
+
+.self-care-block {
+    grid-area: self-care-block;
+    background-color: indianred;
 }
 
 /* Frontend Mentor | attribution */
