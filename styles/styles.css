@@ -187,7 +187,48 @@ a {
 
 .work-block {
     grid-area: work-block;
-    background-color: green;
+} 
+
+.time-stats,
+.work-block-background {
+    border-radius: 1.5rem;
+}
+
+.time-stats {
+    position: relative;
+    background: var(--clr-neutral-dark-blue);
+    margin-top: -120.5px;
+    padding: 2.8rem 2.4rem;
+    z-index: 10;
+}
+
+.time-stats-top {
+    margin-bottom: .7rem;
+}
+
+.time-stats-top,
+.time-stats-btm {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.time-stats__accent {
+    color: var(--clr-neutral-pale-blue)
+}
+
+.work-block-background {
+    background: var(--clr-primary-work);
+    overflow: hidden;
+}
+
+.work-block-background--img {
+    position: relative;
+    z-index: 0;
+    width: 7.8rem;
+    height: 7.8rem;
+    margin: -1.091rem 1.742rem 9.291rem auto;
 }
 
 .play-block {
