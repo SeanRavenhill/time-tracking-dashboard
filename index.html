@@ -15,115 +15,110 @@
   <main>
     <div class="container">
 
-      <div class="time-tracking-dash">
+      <div class="dash">
 
-        <div class="user-block">
-          <div class="user-profile">
-            <img class="user-profile-img" src="images/image-jeremy.png" alt="profile picture of user Jeremy" />
-            <div class="user-profile-info">
-              <h4 class="user-profile-info__sub-title">Report for</h4>
-              <h2 class="user-profile-info__title">Jeremy Robson</h2>
-            </div>  
+        <div class="user">
+          <div class="profile">
+            <img src="images/image-jeremy.png" alt="user profile image" class="profile__img">
+            <div class="profile-text">
+              <h4 class="profile-text__sub-title profile-text__sub-title--accent">Report for</h4>
+              <h2 clas="profile-text__title">Jeremy Robson</h2>
+            </div>
           </div>
           <div class="time-periods">
             <button id="btn-daily" class="btn">Daily</button>
-            <button id="btn-weekly" class="btn btn__active">Weekly</button>
+            <button id="btn-weekly" class="btn btn--active">Weekly</button>
             <button id="btn-monthly" class="btn">Monthly</button>
           </div>
-        </div>
-
-        
-  
-        <div class="work-block">
-
-          <div class="work-block-background">
-            <img class="work-block-background--img" src="images/icon-work.svg" alt="icon-work" />  
-          </div>
-
-          <div class="time-stats">
-            <div class="time-stats-top">
+        </div> <!-- user -->
+       
+        <div class="work">
+          <div class="time-report">
+            <div class="time-report__top">
               <h3>Work</h3>
-              <img class="time-stats__accent" src="images/icon-ellipsis.svg" alt="icon-ellipsis" />
+              <img src="images/icon-ellipsis.svg" alt="ellipsis icon">
             </div>
-            <div class="time-stats-btm">
-              <h1 id="time-stats-current">32hrs</h1>
-              <h4 id="time-stats-previous" class="time-stats__accent">Previous - 36hrs</h4>
+            <div class="time-report__btm">
+              <h1>32hrs</h1>
+              <h4>Last Week - 36hrs</h4>
             </div>
           </div>
-
-          
-
-        </div>
-
+        </div> <!-- word -->
         
-          <!-- Work -->
-          <!-- 5hrs | daily -->
-          <!-- Previous - 7hrs | daily -->
-          <!-- 32hrs | weekly -->
-          <!-- Previous - 36hrs | weekly -->
-          <!-- 103hrs | monthly -->
-          <!-- Previous - 128hrs |monthly -->
+        <div class="play">
+          <div class="time-report">
+            <div class="time-report__top">
+              <h3>Work</h3>
+              <img src="images/icon-ellipsis.svg" alt="ellipsis icon">
+            </div>
+            <div class="time-report__btm">
+              <h1>32hrs</h1>
+              <h4>Last Week - 36hrs</h4>
+            </div>
+          </div>
+        </div> <!-- play -->
         
-  
-        <div class="play-block">
-          Play
-          1hr <!-- daily -->
-          Previous - 2hrs <!-- daily -->
-          10hrs <!-- weekly -->
-          Previous - 8hrs <!-- weekly -->
-          23hrs <!-- monthly -->
-          Previous - 29hrs <!-- monthly -->
-        </div>
-  
-        <div class="study-block">
-          Study
-          0hrs <!-- daily -->
-          Previous - 1hr <!-- daily -->
-          4hrs <!-- weekly -->
-          Previous - 7hrs <!-- weekly -->
-          13hrs <!-- monthly -->
-          Previous - 19hrs <!-- monthly -->
-        </div>
-  
-        <div class="exercise-block">
-          Exercise
-          1hr <!-- daily -->
-          Previous - 1hr <!-- daily -->
-          4hrs <!-- weekly -->
-          Previous - 5hrs <!-- weekly -->
-          11hrs <!-- monthly -->
-          Previous - 18hrs <!-- monthly -->
-        </div>
-  
-        <div class="social-block">
-          Social
-          1hr <!-- daily -->
-          Previous - 3hrs <!-- daily -->
-          5hrs <!-- weekly -->
-          Previous - 10hrs <!-- weekly -->
-          21hrs <!-- monthly -->
-          Previous - 23hrs <!-- monthly -->
-        </div>
-  
-        <div class="self-care-block">
-          Self Care
-          0hrs <!-- daily -->
-          Previous - 1hr <!-- daily -->
-          2hrs <!-- weekly -->
-          Previous - 2hrs <!-- weekly -->
-          7hrs <!-- monthly -->
-          Previous - 11hrs <!-- monthly -->
-        </div>
+        <div class="study">
+          <div class="time-report">
+            <div class="time-report__top">
+              <h3>Work</h3>
+              <img src="images/icon-ellipsis.svg" alt="ellipsis icon">
+            </div>
+            <div class="time-report__btm">
+              <h1>32hrs</h1>
+              <h4>Last Week - 36hrs</h4>
+            </div>
+          </div>
+        </div> <!-- study -->
+        
+        <div class="exercise">
+          <div class="time-report">
+            <div class="time-report__top">
+              <h3>Work</h3>
+              <img src="images/icon-ellipsis.svg" alt="ellipsis icon">
+            </div>
+            <div class="time-report__btm">
+              <h1>32hrs</h1>
+              <h4>Last Week - 36hrs</h4>
+            </div>
+          </div>
+        </div> <!-- exercise -->
+        
+        <div class="social">
+          <div class="time-report">
+            <div class="time-report__top">
+              <h3>Work</h3>
+              <img src="images/icon-ellipsis.svg" alt="ellipsis icon">
+            </div>
+            <div class="time-report__btm">
+              <h1>32hrs</h1>
+              <h4>Last Week - 36hrs</h4>
+            </div>
+          </div>
+        </div> <!-- social -->
+        
+        <div class="self-care">
+          <div class="time-report">
+            <div class="time-report__top">
+              <h3>Work</h3>
+              <img src="images/icon-ellipsis.svg" alt="ellipsis icon">
+            </div>
+            <div class="time-report__btm">
+              <h1>32hrs</h1>
+              <h4>Last Week - 36hrs</h4>
+            </div>
+          </div>
+        </div> <!-- self-care -->
+        
+      </div> <!-- dash -->
 
-      </div>
-
-      
-          
       <div class="attribution">
         Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
         Coded by <a href="#">Your Name Here</a>.
       </div>
-    </div>
+
+    </div> <!-- container -->
   </main>
 </body>
 </html>
+
