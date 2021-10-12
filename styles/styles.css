@@ -18,12 +18,11 @@
 	--clr-neutral-dark-blue: hsla(235, 46%, 20%, 1);
 	--clr-neutral-desaturared-blue: hsla(236, 41%, 34%, 1);
 	--clr-neutral-pale-blue: hsla(236, 100%, 87%, 1);
-    --clr--btn--passive: hsla(235, 45%, 61%, 1);
+	--clr--btn--passive: hsla(235, 45%, 61%, 1);
 	--clr-white: hsla(0, 0%, 100%, 1);
 	--ff-primary: "Rubik", sans-serif;
 	--fs-body: 1.8rem;
 }
-
 /* Showcase Body (Centers Card to Page) - CSS Grid Method */
 body {
 	min-height: 100vh;
@@ -40,7 +39,7 @@ body {
 
 html,
 body {
-	/* background-color: var(--clr-neutral-very-dark-blue); */
+	background: var(--clr-neutral-very-dark-blue);
 	font-family: var(--ff-primary);
 	font-size: var(--fs-body);
 	color: var(--clr-white);
@@ -60,73 +59,71 @@ h4,
 p,
 a {
 	margin: 0;
-    padding: 0;
+	padding: 0;
 }
 
 /* Typography & Typhography Media Queries */
 @media only screen and (max-width: 1920px) {
-    h1 {
-        font-size: 5.6rem;
-        font-weight: 300;
-    }
+	h1 {
+		font-size: 5.6rem;
+		font-weight: 300;
+	}
 
-    h2 {
-        font-size: 4rem;
-        font-weight: 300;
-    }
+	h2 {
+		font-size: 4rem;
+		font-weight: 300;
+	}
 }
 
 @media only screen and (max-width: 428px) {
-    h1 {
-        font-size: 3.2rem;
-        font-weight: 300;
-    }
+	h1 {
+		font-size: 3.2rem;
+		font-weight: 300;
+	}
 
-    h2 {
-        font-size: 2.4rem;
-        font-weight: 300;
-    }
+	h2 {
+		font-size: 2.4rem;
+		font-weight: 300;
+	}
 
-    h3 {
-        font-size: 1.8rem;
-        font-weight: 500;
-    }
+	h3 {
+		font-size: 1.8rem;
+		font-weight: 500;
+	}
 
-    h4 {
-        font-size: 1.5rem;
-        font-weight: 400;
-    }
+	h4 {
+		font-size: 1.5rem;
+		font-weight: 400;
+	}
 
-    p,
-    .btn {
-        font-size: 1.8rem;
-        font-weight: 400;
-    }
+	p,
+	.btn {
+		font-size: 1.8rem;
+		font-weight: 400;
+	}
 }
 
 /* Layout */
 .container {
-    /* border: 1px solid red; */
-    width: 100%;
-    max-width: 375px;
-    margin: 0 auto;
+	width: 100%;
+	max-width: 375px;
+	margin: 0 auto;
 }
 
 .dash {
-    /* border: 1px solid green; */
-    display: grid;
-    grid-template-columns: minmax(min-content, max-content);
-    grid-template-rows: minmax(min-content, max-content);
-    grid: 
-        "user" 
-        "work"
-        "play"
-        "study"
-        "exercise"
-        "social"
-        "self-care";
-    gap: 2.4rem;
-    margin: 8.1rem 2.4rem;
+	display: grid;
+	grid-template-columns: minmax(min-content, max-content);
+	grid-template-rows: minmax(min-content, max-content);
+	grid:
+		"user"
+		"work"
+		"play"
+		"study"
+		"exercise"
+		"social"
+		"self-care";
+	gap: 2.4rem;
+	margin: 8.1rem 2.4rem;
 }
 
 .user,
@@ -136,224 +133,254 @@ a {
 .exercise,
 .social,
 .self-care {
-    border-radius: 1.5rem;
-    overflow: hidden;
+	border-radius: 1.5rem;
+	overflow: hidden;
 }
 
 .user {
-    grid-area: user;
-    background-color: var(--clr-neutral-dark-blue);
+	grid-area: user;
+	background: var(--clr-neutral-dark-blue);
 }
 
 .profile {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    isolation: isolate;
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	isolation: isolate;
 }
 
 .profile::before,
 .profile::after {
-    content: '';
-    position: absolute;
-    background-color: var(--clr-primary-blue);
-    width: 100%;
-    height: 100%;
-    border-radius: 1.5rem;
-    z-index: -1;
+	content: "";
+	position: absolute;
+	background: var(--clr-primary-blue);
+	width: 100%;
+	height: 100%;
+	border-radius: 1.5rem;
+	z-index: -1;
 }
 
 .profile__img {
-    width: 6.4rem;
-    height: 6.4rem;
-    border: 3px solid var(--clr-white);
-    border-radius: 50%;
-    margin: 3.5rem 2rem 3.4rem 3.2rem;
+	width: 6.4rem;
+	height: 6.4rem;
+	border: 3px solid var(--clr-white);
+	border-radius: 50%;
+	margin: 3.5rem 2rem 3.4rem 3.2rem;
 }
 
 .profile-text {
-    margin-right: 3.9rem;
+	margin-right: 3.9rem;
 }
 
 .profile-text__sub-title {
-    margin-bottom: 0.4rem;
+	margin-bottom: 0.4rem;
 }
 
 .profile-text__sub-title--accent {
-    color: var(--clr-neutral-pale-blue)
+	color: var(--clr-neutral-pale-blue);
 }
 
 .time-periods {
-    display: flex;
-    justify-content: space-evenly;
-    margin: 2.4rem 0 2.5rem 0;
+	display: flex;
+	justify-content: space-evenly;
+	margin: 2.4rem 0 2.5rem 0;
 }
 
 .btn {
-    border: none;
-    background: none;
-    color: var(--clr--btn--passive);
-    cursor: pointer;
+	border: none;
+	background: none;
+	color: var(--clr--btn--passive);
+	cursor: pointer;
 }
 
 .btn--active {
-    color: var(--clr-white)
+	color: var(--clr-white);
 }
 
 .work {
-    grid-area: work;
-    position: relative;
-    background-color: var(--clr-primary-work);
-    isolation: isolate;
-    z-index: 0;
+	grid-area: work;
+	position: relative;
+	background: linear-gradient(
+		to top,
+		var(--clr-neutral-very-dark-blue) 0%,
+		var(--clr-primary-work) 50%,
+		var(--clr-primary-work) 100%
+	);
+	isolation: isolate;
+	z-index: 1;
 }
 
 .work::before,
 .work::after {
-    content: "";
-    position: absolute;
-    background-image: url("../images/icon-work.svg");
-    background-repeat: no-repeat;
-    width: 7.8rem;
-    height: 7.8rem;
-    top: -10.90px;
-    right: 17.42px;
-    z-index: -1;
+	content: "";
+	position: absolute;
+	background-image: url("../images/icon-work.svg");
+	background-repeat: no-repeat;
+	width: 7.8rem;
+	height: 7.8rem;
+	top: -10.9px;
+	right: 17.42px;
+	z-index: 0;
 }
 
 .time-report {
-    background-color: var(--clr-neutral-dark-blue);
-    border-radius: 1.5rem;
-    margin-top: 3.8rem;
-    padding: 2.8rem 2.4rem;
+	position: relative;
+	background-color: var(--clr-neutral-dark-blue);
+	border-radius: 1.5rem;
+	margin-top: 3.8rem;
+	padding: 2.8rem 2.4rem;
+	isolation: isolate;
+	z-index: 2;
 }
 
 .time-report__top,
 .time-report__btm {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
 }
 
 .time-report__top {
-    margin-bottom: .6rem;
+	margin-bottom: 0.6rem;
 }
 
 .play {
-    grid-area: play;
-    position: relative;
-    background-color: var(--clr-primary-play);
-    isolation: isolate;
-    z-index: 0;
+	grid-area: play;
+	position: relative;
+	background: linear-gradient(
+		to top,
+		var(--clr-neutral-very-dark-blue) 0%,
+		var(--clr-primary-play) 50%,
+		var(--clr-primary-play) 100%
+	);
+	isolation: isolate;
+	z-index: 0;
 }
 
 .play::before,
 .play::after {
-    content: "";
-    position: absolute;
-    background-image: url("../images/icon-play.svg");
-    background-repeat: no-repeat;
-    width: 9rem;
-    height: 9rem;
-    top: -14.4px;
-    right: 11px;
-    z-index: -1;
+	content: "";
+	position: absolute;
+	background-image: url("../images/icon-play.svg");
+	background-repeat: no-repeat;
+	width: 9rem;
+	height: 9rem;
+	top: -14.4px;
+	right: 11px;
+	z-index: -1;
 }
 
 .study {
-    grid-area: study;
-    position: relative;
-    background-color: var(--clr-primary-study);
-    isolation: isolate;
-    z-index: 0;
+	grid-area: study;
+	position: relative;
+	background: linear-gradient(
+		to top,
+		var(--clr-neutral-very-dark-blue) 0%,
+		var(--clr-primary-study) 50%,
+		var(--clr-primary-study) 100%
+	);
+	isolation: isolate;
+	z-index: 0;
 }
 
 .study::before,
 .study::after {
-    content: "";
-    position: absolute;
-    background-image: url("../images/icon-study.svg");
-    background-repeat: no-repeat;
-    width: 7.8rem;
-    height: 7.8rem;
-    top: -6.05px;
-    right: 17.07px;
-    z-index: -1;
+	content: "";
+	position: absolute;
+	background-image: url("../images/icon-study.svg");
+	background-repeat: no-repeat;
+	width: 7.8rem;
+	height: 7.8rem;
+	top: -6.05px;
+	right: 17.07px;
+	z-index: -1;
 }
 
 .exercise {
-    grid-area: exercise;
-    position: relative;
-    background-color: var(--clr-primary-exercise);
-    isolation: isolate;
-    z-index: 0;
+	grid-area: exercise;
+	position: relative;
+	background: linear-gradient(
+		to top,
+		var(--clr-neutral-very-dark-blue) 0%,
+		var(--clr-primary-exercise) 50%,
+		var(--clr-primary-exercise) 100%
+	);
+	isolation: isolate;
+	z-index: 0;
 }
 
 .exercise::before,
 .exercise::after {
-    content: "";
-    position: absolute;
-    background-image: url("../images/icon-exercise.svg");
-    background-repeat: no-repeat;
-    width: 81px;
-    height: 53.48px;
-    top: -0.42px;
-    right: 16.27px;
-    z-index: -1;
+	content: "";
+	position: absolute;
+	background-image: url("../images/icon-exercise.svg");
+	background-repeat: no-repeat;
+	width: 81px;
+	height: 53.48px;
+	top: -0.42px;
+	right: 16.27px;
+	z-index: -1;
 }
 
 .social {
-    grid-area: social;
-    position: relative;
-    background-color: var(--clr-primary-social);
-    isolation: isolate;
-    z-index: 0;
+	grid-area: social;
+	position: relative;
+	background: linear-gradient(
+		to top,
+		var(--clr-neutral-very-dark-blue) 0%,
+		var(--clr-primary-social) 50%,
+		var(--clr-primary-social) 100%
+	);
+	isolation: isolate;
+	z-index: 0;
 }
 
 .social::before,
 .social::after {
-    content: "";
-    position: absolute;
-    background-image: url("../images/icon-social.svg");
-    background-repeat: no-repeat;
-    width: 73.6px;
-    height: 100px;
-    top: -15px;
-    right: 13.48px;
-    z-index: -1;
+	content: "";
+	position: absolute;
+	background-image: url("../images/icon-social.svg");
+	background-repeat: no-repeat;
+	width: 73.6px;
+	height: 100px;
+	top: -15px;
+	right: 13.48px;
+	z-index: -1;
 }
 
 .self-care {
-    grid-area: self-care;
-    position: relative;
-    background-color: var(--clr-primary-self-care);
-    isolation: isolate;
-    z-index: 0;
+	grid-area: self-care;
+	position: relative;
+	background: linear-gradient(
+		to top,
+		var(--clr-neutral-very-dark-blue) 0%,
+		var(--clr-primary-self-care) 50%,
+		var(--clr-primary-self-care) 100%
+	);
+	isolation: isolate;
+	z-index: 0;
 }
 
 .self-care::before,
 .self-care::after {
-    content: "";
-    position: absolute;
-    background-image: url("../images/icon-self-care.svg");
-    background-repeat: no-repeat;
-    width: 72px;
-    height: 66px;
-    top: -15px;
-    right: 13.48px;
-    z-index: -1;
+	content: "";
+	position: absolute;
+	background-image: url("../images/icon-self-care.svg");
+	background-repeat: no-repeat;
+	width: 72px;
+	height: 66px;
+	top: -15px;
+	right: 13.48px;
+	z-index: -1;
 }
 
 /* Frontend Mentor | attribution */
 .attribution {
 	font-size: 11px;
 	text-align: center;
-}
-
-.attribution__text {
-	margin-bottom: 1rem;
+	margin-bottom: 2rem;
 }
 
 .attribution__link {
@@ -361,7 +388,7 @@ a {
 }
 
 /* Layout Media Queries */
-@media only screen and (max-width: 1920px) {
+/* @media only screen and (max-width: 1920px) {
     .container {
         min-width: 1440px;
     }
@@ -377,4 +404,4 @@ a {
     .container {
         min-width: 325px;
     }
-}
+} */
