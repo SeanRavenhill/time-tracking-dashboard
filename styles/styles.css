@@ -62,47 +62,6 @@ a {
 	padding: 0;
 }
 
-/* Typography & Typhography Media Queries */
-@media only screen and (max-width: 1920px) {
-	h1 {
-		font-size: 5.6rem;
-		font-weight: 300;
-	}
-
-	h2 {
-		font-size: 4rem;
-		font-weight: 300;
-	}
-}
-
-@media only screen and (max-width: 428px) {
-	h1 {
-		font-size: 3.2rem;
-		font-weight: 300;
-	}
-
-	h2 {
-		font-size: 2.4rem;
-		font-weight: 300;
-	}
-
-	h3 {
-		font-size: 1.8rem;
-		font-weight: 500;
-	}
-
-	h4 {
-		font-size: 1.5rem;
-		font-weight: 400;
-	}
-
-	p,
-	.btn {
-		font-size: 1.8rem;
-		font-weight: 400;
-	}
-}
-
 /* Layout */
 .container {
 	width: 100%;
@@ -167,6 +126,7 @@ a {
 	border: 3px solid var(--clr-white);
 	border-radius: 50%;
 	margin: 3.5rem 2rem 3.4rem 3.2rem;
+	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .profile-text {
@@ -174,11 +134,22 @@ a {
 }
 
 .profile-text__sub-title {
+	font-family: "Rubik", sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 15px;
+	line-height: 18px;
+	color: #bbc0ff;
 	margin-bottom: 0.4rem;
 }
 
-.profile-text__sub-title--accent {
-	color: var(--clr-neutral-pale-blue);
+.profile-text__title {
+	font-family: "Rubik", sans-serif;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 24px;
+	line-height: 28px;
+	color: #ffffff;
 }
 
 .time-periods {
@@ -188,14 +159,26 @@ a {
 }
 
 .btn {
+	font-family: "Rubik", sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 21px;
+	text-align: center;
+	color: #7078c9;
 	border: none;
 	background: none;
-	color: var(--clr--btn--passive);
 	cursor: pointer;
 }
 
 .btn--active {
-	color: var(--clr-white);
+	font-family: "Rubik", sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 21px;
+	text-align: center;
+	color: #ffffff;
 }
 
 .work {
@@ -229,7 +212,7 @@ a {
 	background-color: var(--clr-neutral-dark-blue);
 	border-radius: 1.5rem;
 	margin-top: 3.8rem;
-	padding: 2.8rem 2.4rem;
+	padding: 2.8rem 2.4rem 2.8rem 2.4rem;
 	isolation: isolate;
 	z-index: 2;
 }
@@ -244,6 +227,35 @@ a {
 
 .time-report__top {
 	margin-bottom: 0.6rem;
+}
+
+/* Time report typographty */
+.time-report__top--title {
+	font-family: Rubik;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 21px;
+	color: #ffffff;
+}
+
+.time-report__btm--time {
+	font-family: Rubik;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 32px;
+	line-height: 38px;
+	color: #ffffff;
+}
+
+.time-report__btm--previous {
+	font-family: Rubik;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 15px;
+	line-height: 18px;
+	text-align: right;
+	color: #bbc0ff;
 }
 
 .play {
@@ -388,13 +400,83 @@ a {
 }
 
 /* Layout Media Queries */
-/* @media only screen and (max-width: 1920px) {
-    .container {
-        min-width: 1440px;
-    }
+@media only screen and (min-width: 1024px) {
+	.container {
+		width: 100%;
+		max-width: 1440px;
+		margin: 0 auto;
+	}
+
+	.dash {
+		grid:
+			"user work play study"
+			"user exercise social self-care";
+		gap: 3rem;
+	}
+
+	.profile {
+		width: 255px;
+		flex-direction: column;
+		align-items:flex-start ;
+	}
+
+	.profile__img {
+		margin: 3.7rem 0 4.3rem 3.2rem;
+	}
+
+	.profile-text {
+		margin: 0;
+		margin: 0 8.5rem 8rem 3.2rem;
+	}
+
+	.profile-text__sub-title {
+		margin-bottom: 0.3rem;
+	}
+
+	.profile-text__title {
+		font-size: 40px;
+		line-height: 47px;
+	}
+
+	.time-periods {
+		flex-direction: column;
+		align-items: flex-start;
+		margin: 2.6rem 0.5rem 3.2rem 3.2rem;
+	} 
+
+	.btn-daily,
+	.btn-weekly {
+		margin-bottom: 2.1rem;
+	}
+
+	.time-report {
+		margin-top: 4.5rem;
+		padding: 2.9rem 3.5rem 3.2rem 3rem;
+	}
+
+	.time-report__top {
+		margin-bottom: 2.4rem;
+	}
+
+	.time-report__btm {
+		width: 190px;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	
+	.time-report__btm--time {
+		font-size: 56px;
+		line-height: 66px;
+		margin-bottom: 0.8rem;
+	}
+	
+	.time-report__btm--previous {
+		text-align: left;
+	}
+
 }
 
-@media only screen and (max-width: 428px) {
+/* @media only screen and (max-width: 428px) {
     .container {
         min-width: 375px;
     }
