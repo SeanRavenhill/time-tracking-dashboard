@@ -1,10 +1,21 @@
-document.getElementById("btn-daily").addEventListener("click", function () {
-	async function getData() {
+const btnDailyToggle = document.getElementById("btn-daily");
+const btnWeeklyToggle = document.getElementById("btn-weekly");
+const btnMonthlyToggle = document.getElementById("btn-monthly");
+
+document
+	.getElementById("btn-daily")
+	.addEventListener("click", async function () {
 		let response = await fetch("./data/data.json");
 		let data = await response.json();
 
-        console.log(document.getElementById("btn-daily").className)
+		// handles btn active stage toggles
+		if (btnDailyToggle.className === "btn btn-daily") {
+			btnDailyToggle.classList.add("btn--active");
+			btnWeeklyToggle.classList.remove("btn--active");
+			btnMonthlyToggle.classList.remove("btn--active");
+		}
 
+		// handles DOM elements population
 		document.getElementById("work-current").textContent =
 			data[0].timeframes.daily.current === 1
 				? data[0].timeframes.daily.current + "hr"
@@ -58,16 +69,20 @@ document.getElementById("btn-daily").addEventListener("click", function () {
 			data[5].timeframes.daily.previous === 1
 				? "Yesterday - " + data[5].timeframes.daily.previous + "hr"
 				: "Yesterday - " + data[5].timeframes.daily.previous + "hrs";
-	}
-	getData();
-});
+	});
 
-document.getElementById("btn-weekly").addEventListener("click", function () {
-	async function getData() {
+document
+	.getElementById("btn-weekly")
+	.addEventListener("click", async function () {
 		let response = await fetch("./data/data.json");
 		let data = await response.json();
 
-        console.log(document.getElementById("btn-weekly").className)
+		// handles btn active stage toggles
+		if (btnWeeklyToggle.className === "btn btn-weekly") {
+			btnDailyToggle.classList.remove("btn--active");
+			btnWeeklyToggle.classList.add("btn--active");
+			btnMonthlyToggle.classList.remove("btn--active");
+		}
 
 		document.getElementById("work-current").textContent =
 			data[0].timeframes.weekly.current === 1
@@ -122,16 +137,20 @@ document.getElementById("btn-weekly").addEventListener("click", function () {
 			data[5].timeframes.weekly.previous === 1
 				? "Last Week - " + data[5].timeframes.weekly.previous + "hr"
 				: "Last Week - " + data[5].timeframes.weekly.previous + "hrs";
-	}
-	getData();
-});
+	});
 
-document.getElementById("btn-monthly").addEventListener("click", function () {
-	async function getData() {
+document
+	.getElementById("btn-monthly")
+	.addEventListener("click", async function () {
 		let response = await fetch("./data/data.json");
 		let data = await response.json();
 
-        console.log(document.getElementById("btn-monthly").className)
+		// handles btn active stage toggles
+		if (btnMonthlyToggle.className === "btn btn-monthly") {
+			btnDailyToggle.classList.remove("btn--active");
+			btnWeeklyToggle.classList.remove("btn--active");
+			btnMonthlyToggle.classList.add("btn--active");
+		}
 
 		document.getElementById("work-current").textContent =
 			data[0].timeframes.monthly.current === 1
@@ -186,6 +205,4 @@ document.getElementById("btn-monthly").addEventListener("click", function () {
 			data[5].timeframes.weekly.previous === 1
 				? "Last Month - " + data[5].timeframes.monthly.previous + "hr"
 				: "Last Month - " + data[5].timeframes.monthly.previous + "hrs";
-	}
-	getData();
-});
+	});
