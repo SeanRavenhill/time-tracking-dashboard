@@ -171,6 +171,11 @@ a {
 	cursor: pointer;
 }
 
+.btn:hover,
+.btn:focus {
+	color: var(--clr-white)
+}
+
 .btn--active {
 	font-family: "Rubik", sans-serif;
 	font-style: normal;
@@ -217,6 +222,12 @@ a {
 	z-index: 2;
 }
 
+.time-report:hover,
+.time-report:focus {
+	background-color: var(--clr-neutral-desaturared-blue);
+	cursor: pointer;
+}
+
 .time-report__top,
 .time-report__btm {
 	display: flex;
@@ -227,6 +238,12 @@ a {
 
 .time-report__top {
 	margin-bottom: 0.6rem;
+}
+
+.time-report__icon:hover,
+.time-report__icon:focus {
+	filter:  brightness(0) invert(1);
+	cursor: pointer;
 }
 
 /* Time report typographty */
