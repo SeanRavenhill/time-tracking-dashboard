@@ -173,7 +173,7 @@ a {
 
 .btn:hover,
 .btn:focus {
-	color: var(--clr-white)
+	color: var(--clr-white);
 }
 
 .btn--active {
@@ -242,7 +242,7 @@ a {
 
 .time-report__icon:hover,
 .time-report__icon:focus {
-	filter:  brightness(0) invert(1);
+	filter: brightness(0) invert(1);
 	cursor: pointer;
 }
 
@@ -412,6 +412,10 @@ a {
 	margin-bottom: 2rem;
 }
 
+.attribution__frontendmentor {
+	margin-bottom: 0.25rem;
+}
+
 .attribution__link {
 	color: var(--clr-primary-accent);
 }
@@ -434,7 +438,7 @@ a {
 	.profile {
 		width: 255px;
 		flex-direction: column;
-		align-items:flex-start ;
+		align-items: flex-start;
 	}
 
 	.profile__img {
@@ -459,7 +463,7 @@ a {
 		flex-direction: column;
 		align-items: flex-start;
 		margin: 2.6rem 0.5rem 3.2rem 3.2rem;
-	} 
+	}
 
 	.btn-daily,
 	.btn-weekly {
@@ -480,27 +484,14 @@ a {
 		flex-direction: column;
 		align-items: flex-start;
 	}
-	
+
 	.time-report__btm--time {
 		font-size: 56px;
 		line-height: 66px;
 		margin-bottom: 0.8rem;
 	}
-	
+
 	.time-report__btm--previous {
 		text-align: left;
 	}
-
 }
-
-/* @media only screen and (max-width: 428px) {
-    .container {
-        min-width: 375px;
-    }
-}
-
-@media only screen and (max-width: 320px) {
-    .container {
-        min-width: 325px;
-    }
-} */

@@ -84,6 +84,7 @@ document
 			btnMonthlyToggle.classList.remove("btn--active");
 		}
 
+		// handles DOM elements population
 		document.getElementById("work-current").textContent =
 			data[0].timeframes.weekly.current === 1
 				? data[0].timeframes.weekly.current + "hr"
@@ -152,6 +153,7 @@ document
 			btnMonthlyToggle.classList.add("btn--active");
 		}
 
+		// handles DOM elements population
 		document.getElementById("work-current").textContent =
 			data[0].timeframes.monthly.current === 1
 				? data[0].timeframes.monthly.current + "hr"
