@@ -11,7 +11,7 @@
 	--clr-primary-exercise: hsla(145, 58%, 55%, 1);
 	--clr-primary-social: hsla(264, 64%, 52%, 1);
 	--clr-primary-self-care: hsla(43, 84%, 65%, 1);
-	--clr-neutral-very-dark-blue: hsla(226, 43%, 10%, 1);                     
+	--clr-neutral-very-dark-blue: hsla(226, 43%, 10%, 1);
 	--clr-neutral-dark-blue: hsla(235, 46%, 20%, 1);
 	--clr-neutral-desaturared-blue: hsla(236, 41%, 34%, 1);
 	--clr-neutral-pale-blue: hsla(236, 100%, 87%, 1);
@@ -212,7 +212,7 @@ a {
 .time-report__top--title {
 	font-weight: 500;
 	font-size: 1.8rem;
-	line-height: 2.1rem;;
+	line-height: 2.1rem;
 }
 
 .time-report__btm--time {
@@ -402,7 +402,6 @@ a {
 
 /* Media Queries */
 @media only screen and (min-width: 1024px) {
-
 	/* Layout */
 	.container {
 		width: 100%;
@@ -457,7 +456,7 @@ a {
 	}
 
 	.time-report__btm {
-		width: 19.0rem;
+		width: 19rem;
 		flex-direction: column;
 		align-items: flex-start;
 	}
@@ -468,7 +467,7 @@ a {
 
 	/* Typography */
 	.profile-text__title {
-		font-size: 4.0rem;
+		font-size: 4rem;
 		line-height: 4.7rem;
 	}
 

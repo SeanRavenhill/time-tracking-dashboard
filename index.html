@@ -1,126 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
-
-  <head>
+	<head>
 		<meta charset="UTF-8" />
 		<meta name="author" content="Sean Ravenhill" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" />
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+		/>
 		<link rel="stylesheet" href="styles/styles.css" />
-    <title>Frontend Mentor | Time tracking dashboard</title>
-  </head>
+		<title>Frontend Mentor | Time tracking dashboard</title>
+	</head>
 
-<body>
-  <main>
-    <div class="container">
+	<body>
+		<main>
+			<div class="container">
+				<div class="dash">
+					<div class="user">
+						<div class="profile">
+							<img
+								src="images/image-jeremy.png"
+								alt="user profile image"
+								class="profile__img"
+							/>
+							<div class="profile-text">
+								<p class="profile-text__sub-title">Report for</p>
+								<h2 class="profile-text__title">Jeremy Robson</h2>
+							</div>
+						</div>
+						<div class="time-periods">
+							<button id="btn-daily" class="btn btn-daily">Daily</button>
+							<button id="btn-weekly" class="btn btn-weekly">Weekly</button>
+							<button id="btn-monthly" class="btn btn-monthly">Monthly</button>
+						</div>
+					</div>
+					<!-- user -->
 
-      <div class="dash">
+					<div class="work">
+						<div class="time-report">
+							<div class="time-report__top">
+								<h3 class="time-report__top--title">Work</h3>
+								<img
+									src="images/icon-ellipsis.svg"
+									alt="ellipsis icon"
+									class="time-report__icon"
+								/>
+							</div>
+							<div class="time-report__btm">
+								<h1 id="work-current" class="time-report__btm--time"></h1>
+								<p id="work-previous" class="time-report__btm--previous"></p>
+							</div>
+						</div>
+					</div>
+					<!-- word -->
 
-        <div class="user">
-          <div class="profile">
-            <img src="images/image-jeremy.png" alt="user profile image" class="profile__img">
-            <div class="profile-text">
-              <p class="profile-text__sub-title">Report for</p>
-              <h2 class="profile-text__title">Jeremy Robson</h2>
-            </div>
-          </div>
-          <div class="time-periods">
-            <button id="btn-daily" class="btn btn-daily">Daily</button>
-            <button id="btn-weekly" class="btn btn-weekly">Weekly</button>
-            <button id="btn-monthly" class="btn btn-monthly">Monthly</button>
-          </div>
-        </div> <!-- user -->
-       
-        <div class="work">
-          <div class="time-report">
-              <div class="time-report__top">
-                <h3 class="time-report__top--title">Work</h3>
-                <img src="images/icon-ellipsis.svg" alt="ellipsis icon" class="time-report__icon">
-              </div>
-              <div class="time-report__btm">
-                <h1 id="work-current" class="time-report__btm--time"></h1>
-                <p id="work-previous" class="time-report__btm--previous"></p>
-              </div>
-          </div>
-        </div> <!-- word -->
-        
-        <div class="play">
-          <div class="time-report">
-            <div class="time-report__top">
-              <h3 class="time-report__top--title">Play</h3>
-              <img src="images/icon-ellipsis.svg" alt="ellipsis icon" class="time-report__icon">
-            </div>
-            <div class="time-report__btm">
-              <h1 id="play-current" class="time-report__btm--time"></h1>
-              <p id="play-previous" class="time-report__btm--previous"></p>
-            </div>
-          </div>
-        </div> <!-- play -->
-        
-        <div class="study">
-          <div class="time-report">
-            <div class="time-report__top">
-              <h3 class="time-report__top--title">Study</h3>
-              <img src="images/icon-ellipsis.svg" alt="ellipsis icon" class="time-report__icon">
-            </div>
-            <div class="time-report__btm">
-              <h1 id="study-current" class="time-report__btm--time"></h1>
-              <p id="study-previous" class="time-report__btm--previous"></p>
-            </div>
-         </div>
-        </div> <!-- study -->
-        
-        <div class="exercise">
-          <div class="time-report">
-            <div class="time-report__top">
-              <h3 class="time-report__top--title">exercise</h3>
-              <img src="images/icon-ellipsis.svg" alt="ellipsis icon" class="time-report__icon">
-            </div>
-            <div class="time-report__btm">
-              <h1 id="exercise-current" class="time-report__btm--time"></h1>
-              <p id="exercise-previous" class="time-report__btm--previous"></p>
-            </div>
-          </div>
-        </div> <!-- exercise -->
-        
-        <div class="social">
-          <div class="time-report">
-            <div class="time-report__top">
-              <h3 class="time-report__top--title">Social</h3>
-              <img src="images/icon-ellipsis.svg" alt="ellipsis icon" class="time-report__icon">
-            </div>
-            <div class="time-report__btm">
-              <h1 id="social-current" class="time-report__btm--time"></h1>
-              <p id="social-previous" class="time-report__btm--previous"></p>
-            </div>
-          </div>
-        </div> <!-- social -->
-        
-        <div class="self-care">
-          <div class="time-report">
-            <div class="time-report__top">
-              <h3 class="time-report__top--title">Self-Care</h3>
-              <img src="images/icon-ellipsis.svg" alt="ellipsis icon" class="time-report__icon">
-            </div>
-            <div class="time-report__btm">
-              <h1 id="self-care-current" class="time-report__btm--time"></h1>
-              <p id="self-care-previous" class="time-report__btm--previous"></p>
-            </div>
-          </div>
-        </div> <!-- self-care -->
-        
-      </div> <!-- dash -->
+					<div class="play">
+						<div class="time-report">
+							<div class="time-report__top">
+								<h3 class="time-report__top--title">Play</h3>
+								<img
+									src="images/icon-ellipsis.svg"
+									alt="ellipsis icon"
+									class="time-report__icon"
+								/>
+							</div>
+							<div class="time-report__btm">
+								<h1 id="play-current" class="time-report__btm--time"></h1>
+								<p id="play-previous" class="time-report__btm--previous"></p>
+							</div>
+						</div>
+					</div>
+					<!-- play -->
 
-      <div class="attribution">
-        <p class="attribution__frontendmentor">Challenge by <a class="attribution__link" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. </p>
-        <p class="attribution__seanravenhill">Coded by <a class="attribution__link" href="https://github.com/SeanRavenhill" target="_blank">Sean Ravenhill</a>.</p>
-      </div>
+					<div class="study">
+						<div class="time-report">
+							<div class="time-report__top">
+								<h3 class="time-report__top--title">Study</h3>
+								<img
+									src="images/icon-ellipsis.svg"
+									alt="ellipsis icon"
+									class="time-report__icon"
+								/>
+							</div>
+							<div class="time-report__btm">
+								<h1 id="study-current" class="time-report__btm--time"></h1>
+								<p id="study-previous" class="time-report__btm--previous"></p>
+							</div>
+						</div>
+					</div>
+					<!-- study -->
 
-    </div> <!-- container -->
-  </main>
-  <script type="text/javascript" src="./js/load.js"></script>
-  <script type="text/javascript" src="./js/index.js"></script>
-</body>
+					<div class="exercise">
+						<div class="time-report">
+							<div class="time-report__top">
+								<h3 class="time-report__top--title">exercise</h3>
+								<img
+									src="images/icon-ellipsis.svg"
+									alt="ellipsis icon"
+									class="time-report__icon"
+								/>
+							</div>
+							<div class="time-report__btm">
+								<h1 id="exercise-current" class="time-report__btm--time"></h1>
+								<p id="exercise-previous" class="time-report__btm--previous"></p>
+							</div>
+						</div>
+					</div>
+					<!-- exercise -->
+
+					<div class="social">
+						<div class="time-report">
+							<div class="time-report__top">
+								<h3 class="time-report__top--title">Social</h3>
+								<img
+									src="images/icon-ellipsis.svg"
+									alt="ellipsis icon"
+									class="time-report__icon"
+								/>
+							</div>
+							<div class="time-report__btm">
+								<h1 id="social-current" class="time-report__btm--time"></h1>
+								<p id="social-previous" class="time-report__btm--previous"></p>
+							</div>
+						</div>
+					</div>
+					<!-- social -->
+
+					<div class="self-care">
+						<div class="time-report">
+							<div class="time-report__top">
+								<h3 class="time-report__top--title">Self-Care</h3>
+								<img
+									src="images/icon-ellipsis.svg"
+									alt="ellipsis icon"
+									class="time-report__icon"
+								/>
+							</div>
+							<div class="time-report__btm">
+								<h1 id="self-care-current" class="time-report__btm--time"></h1>
+								<p id="self-care-previous" class="time-report__btm--previous"></p>
+							</div>
+						</div>
+					</div>
+					<!-- self-care -->
+				</div>
+				<!-- dash -->
+
+				<div class="attribution">
+					<p class="attribution__frontendmentor">
+						Challenge by
+						<a
+							class="attribution__link"
+							href="https://www.frontendmentor.io?ref=challenge"
+							target="_blank"
+							>Frontend Mentor</a
+						>.
+					</p>
+					<p class="attribution__seanravenhill">
+						Coded by
+						<a
+							class="attribution__link"
+							href="https://github.com/SeanRavenhill"
+							target="_blank"
+							>Sean Ravenhill</a
+						>.
+					</p>
+				</div>
+			</div>
+			<!-- container -->
+		</main>
+		<script type="text/javascript" src="./js/load.js"></script>
+		<script type="text/javascript" src="./js/index.js"></script>
+	</body>
 </html>
-
