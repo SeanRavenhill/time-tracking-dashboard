@@ -35,6 +35,34 @@ body {
 	box-sizing: border-box;
 }
 
+/* make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Reset margins & Padding */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+    margin: 0;
+	padding: 0; 
+}
+
+/* set up the body */
+body {
+    line-height: 1.5;
+    min-height: 100vh;
+}
+
+/* General Layout Setup */
 html,
 body {
 	background: var(--clr-neutral-very-dark-blue);
@@ -47,22 +75,6 @@ body {
 	padding: 0;
 }
 
-img {
-	max-width: 100%;
-	display: block;
-}
-
-h1,
-h2,
-h3,
-h4,
-p,
-a {
-	margin: 0;
-	padding: 0;
-}
-
-/* General Layout Setup */
 .container {
 	width: 100%;
 	max-width: 375px;
@@ -423,6 +435,8 @@ a {
 	}
 
 	.profile__img {
+		width: 7.8rem;
+		height: 7.8rem;
 		margin: 3.7rem 0 4.3rem 3.2rem;
 	}
 
